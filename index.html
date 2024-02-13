@@ -23,6 +23,10 @@
       margin: 0 auto;
       padding: 1em;
     }
+
+    .is-cool {
+      font-weight: bold;
+    }
   </style>
 
   <body>
@@ -74,6 +78,8 @@
       </div>
 
       <script>
+
+
         function sortTable() {
           var table, rows, switching, i, x, y, shouldSwitch;
           table = document.getElementById("scoreboard");
@@ -113,6 +119,11 @@
 
         console.log("hello")
         sortTable();
+
+        // grab the top td op the table and add a crown emoji
+        const topScore = document.querySelector("#scoreboard tr:nth-child(1) td:nth-child(1)");
+        topScore.innerHTML = "👑 " + topScore.innerHTML;
+        topScore.classList.add("is-cool");
       </script>
   </body>
 
